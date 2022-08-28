@@ -1,0 +1,23 @@
+baseURL = ''
+languageCode = 'zh-TW'
+title = 'indieveloper'
+hasCJKLanguage = true
+relativeURLs = true
+
+theme = 'blank'
+
+[params]
+mainSections = ['docs']
+subTitle = '獨立開發者'
+timeFormat = "2006.01.02 15:04"
+
+[menu]
+    [[menu.main]]
+        name = 'docs'
+        url = '/docs/'
+        weight = 10
+        
+    [[menu.main]]
+        name = 'blog'
+        url = '/blog/'
+        weight = 20
