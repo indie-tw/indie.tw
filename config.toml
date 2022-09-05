@@ -1,4 +1,4 @@
-baseURL = ''
+baseURL = 'https://indie.tw'
 languageCode = 'zh-TW'
 title = 'indieveloper'
 hasCJKLanguage = true
