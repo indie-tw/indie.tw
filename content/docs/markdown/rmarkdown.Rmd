@@ -1,0 +1,41 @@
+---
+title: "R Markdown"
+author: "林宏信"
+date: "2022-09-05"
+output: 
+  pdf_document:
+    latex_engine: xelatex
+header-includes: |
+  \usepackage{xeCJK}
+  \setmainfont{Noto Serif}
+  \setCJKmainfont{TW-Kai} % NOTE: under the same directory
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Markdown 也可以用來做出漂亮的書面文件，最簡單的就是直接用 Marktext 內建的輸出 PDF 功能，就能有一個整齊乾淨的文件，遠勝過不會排版的人做的 Word 文件。你也可以用 Pandoc 這個工具，將 Markdown 轉換為 LibreOffice 的 odt 文件或是 Microsoft Office 的 docx 文件再進行排版，但這個方法比較麻煩，不是很推薦。
+
+如果你想要做很正式的報告或是寫論文，可以使用 R Markdown 這個工具，它背後使用 LaTeX 這套歷久彌新的排版引擎，可以做出像期刊論文一樣正式的漂亮文件，並讓你在寫論文的過程不必操心排版的問題，能快速寫出漂亮的數學公式，參考文獻、文中引用等功能也通通幫你完成，是個讓寫論文事半功倍的好工具。R Markdown 及 LaTeX 的教學也將在其他部影片詳細說明。
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
