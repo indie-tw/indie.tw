@@ -1,4 +1,6 @@
 #/bin/sh
+SERVER=linchpins
+DEST=/var/www/indie.tw
 
 hugo --cleanDestinationDir &&
 rsync --exclude '.git' --delete \

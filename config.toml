@@ -6,6 +6,8 @@ relativeURLs = true
 
 theme = 'blank'
 
+ignoreFiles = ['/node_modules/*']
+
 [params]
 mainSections = ['docs']
 subTitle = '獨立開發者'
@@ -17,7 +19,12 @@ timeFormat = "2006.01.02 15:04"
         url = '/docs/'
         weight = 10
         
+#    [[menu.main]]
+#        name = 'blog'
+#        url = '/blog/'
+#        weight = 20
+
     [[menu.main]]
-        name = 'blog'
-        url = '/blog/'
-        weight = 20
+        name = 'github'
+        url = 'https://github.com/lancatlin/indie.tw'
+        weight = 30
