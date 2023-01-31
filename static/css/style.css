@@ -89,3 +89,12 @@ input:checked ~ aside {
         /* position: sticky; */
     }
 }
+
+.title-img {
+    display: block;
+    height: 200px;
+    width: auto;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}

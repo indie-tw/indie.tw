@@ -1,7 +1,11 @@
 {{ define "main" }}
 	<main>
-        <h1 class="center title">{{ .Site.Title }}</h1>
+		{{ with .Site.Params.logo }}
+        <div ><img class="title-img" src="{{ . }}"/></div>
+		{{ else }}
+        <h1 class="center">{{ .Site.Title }}</h2>
         <h2 class="center">{{ .Site.Params.SubTitle }}</h2>
+		{{ end }}
         <div align="center">
         {{ .Content }}
         </div>
