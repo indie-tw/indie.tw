@@ -10,6 +10,8 @@ ignoreFiles = ['/node_modules/*']
 mainSections = ['docs']
 subTitle = '獨立開發者'
 timeFormat = "2006.01.02 15:04"
+email = 'hi@indei.tw'
+logo = '/img/logo_transparent.png'
 
 [menu]
     [[menu.main]]
@@ -26,3 +28,16 @@ timeFormat = "2006.01.02 15:04"
         name = 'github'
         url = 'https://github.com/lancatlin/indie.tw'
         weight = 30
+        params.newTab = true
+
+    [[menu.main]]
+        name = 'youtube'
+        url = 'https://www.youtube.com/@indieveloper'
+        weight = 40
+        params.newTab = true
+    
+    [[menu.main]]
+        name = 'odysee'
+        url = 'https://odysee.com/@indieveloper'
+        weight = 50
+        params.newTab = true
