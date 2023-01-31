@@ -4,7 +4,7 @@ date = '2022-12-13T08:40:00+08:00'
 draft = false
 +++
 
-{{< youtube gm6zdoL1r0Y >}}
+{{< odysee "why-self-host:5" >}}
 
 ## 我的檔案在哪裡
 
