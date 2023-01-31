@@ -1,6 +1,10 @@
 <header>
     <nav class="topnav">
+        {{ with .Site.Params.icon }}
+        <a href="{{ "/" | relURL }}"><img class="nav-logo" src="{{ . }}" /></a>
+        {{ else }}
         <a href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+        {{ end }}
         {{ with .Site.Menus.main }}
         <ul>
             {{ range . }}

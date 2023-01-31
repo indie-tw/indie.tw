@@ -12,6 +12,7 @@ subTitle = '獨立開發者'
 timeFormat = "2006.01.02 15:04"
 email = 'hi@indei.tw'
 logo = '/img/logo_transparent.png'
+icon = '/img/icon.png'
 
 [menu]
     [[menu.main]]
