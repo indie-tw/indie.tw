@@ -9,7 +9,7 @@
 
 body {
     color: var(--font-color);
-    font-family: "monospace";
+    font-family: "Noto Sans Mono CJK TC", "monospace";
     background-color: var(--background);
     max-width: var(--page-width);
     margin: auto;
@@ -78,7 +78,6 @@ aside {
     width: var(--side-width);
     position: static;
     height: 100%;
-    overflow: ;
 }
 
 input:checked ~ aside {
