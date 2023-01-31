@@ -4,8 +4,6 @@ title = 'indieveloper'
 hasCJKLanguage = true
 relativeURLs = true
 
-theme = 'blank'
-
 ignoreFiles = ['/node_modules/*']
 
 [params]

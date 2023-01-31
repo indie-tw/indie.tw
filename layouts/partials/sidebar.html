@@ -1,0 +1,16 @@
+<input type="checkbox" id="toggler" checked />
+<aside>
+	<div>
+		<div>
+			<h3>Latest Posts</h3>
+		</div>
+        <ul>
+            {{ range where .Site.RegularPages "Section" "docs" }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+        <div>
+            {{ .TableOfContents }}
+        </div>
+    </div>
+</aside>

@@ -1,0 +1,92 @@
+:root {
+    --main-color: #EAC4D5;
+    --background: #151515;
+    --font-color: white;
+    --main-width: 1024px;
+    --side-width: 300px;
+    --page-width: calc(var(--main-width) + 2 * var(--side-width));
+}
+
+body {
+    color: var(--font-color);
+    font-family: "monospace";
+    background-color: var(--background);
+    max-width: var(--page-width);
+    margin: auto;
+}
+
+main {
+    max-width: var(--main-width);
+    padding: 20px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--main-color);
+}
+
+.center {
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5em;
+}
+
+nav.topnav {
+    display: block;
+    height: 30px;
+    margin: 15px;
+}
+
+nav.topnav ul {
+    display: inline;
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.topnav ul li {
+    display: inline;
+    float: left;
+    padding-right: 15px;
+}
+
+article {
+    line-height: 1.5;
+    word-spacing: -2px;
+    text-align: justify;
+}
+
+p {
+
+}
+
+footer {
+    text-align: center;
+}
+
+aside {
+    margin: 0;
+    padding: 0;
+    width: var(--side-width);
+    position: static;
+    height: 100%;
+    overflow: ;
+}
+
+input:checked ~ aside {
+    margin-left: -300px;
+}
+
+@media screen and (max-width: 1624px) {
+    aside {
+        /* position: sticky; */
+    }
+}
