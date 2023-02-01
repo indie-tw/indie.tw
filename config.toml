@@ -31,7 +31,7 @@ icon = '/img/icon.png'
 
     [[menu.main]]
         name = 'github'
-        url = 'https://github.com/lancatlin/indie.tw'
+        url = 'https://github.com/indie-tw/indie.tw'
         weight = 30
         params.newTab = true
 
