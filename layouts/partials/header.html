@@ -1,5 +1,5 @@
 <header>
-    <nav class="topnav">
+    <nav class="topnav" id="myTopnav">
         {{ with .Site.Params.icon }}
         <a href="{{ "/" | relURL }}"><img class="nav-logo" src="{{ . }}" /></a>
         {{ else }}
@@ -12,5 +12,6 @@
             {{ end }}
         </ul>
         {{ end }}
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">＋</a>
     </nav>
 </header>

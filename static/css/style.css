@@ -39,13 +39,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.5em;
 }
 
-nav.topnav {
+.topnav {
     display: block;
     height: 30px;
     margin: 15px;
 }
 
-nav.topnav ul {
+.topnav ul {
     display: inline;
     float: right;
     list-style-type: none;
@@ -53,12 +53,45 @@ nav.topnav ul {
     padding: 0;
 }
 
-nav.topnav ul li {
+.topnav ul li {
     display: inline;
     float: left;
     padding-right: 15px;
 }
 
+.topnav .icon {
+    display: none;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav ul {
+        display: none;
+    }
+    .topnav .icon {
+        display: block;
+        float: right;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .topnav.responsive ul {
+        float: none;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--background);
+    }
+}
 article {
     line-height: 1.5;
     word-spacing: -2px;

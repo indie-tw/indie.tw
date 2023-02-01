@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ with .Title }}{{ . }} - {{ end}}{{ .Site.Title }} {{ .Site.Params.SubTitle }}</title>
+{{ with .Site.Params.description }}
+<meta name="description" content="{{ . }}">{{ end }}
+{{ with .Site.Params.author }}
+<meta name="author" content="{{ . }}">{{ end }}
+<link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
+<link rel="icon" href="{{ .Site.Params.icon }}">
+{{ with .OutputFormats.Get "RSS" -}}
+{{ printf `
+<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+{{- end }}
+<script src="/js/index.js"></script>
+<script defer data-domain="indie.tw" src="https://analytics.indie.tw/js/script.js"></script>
