@@ -3,22 +3,26 @@ languageCode = 'zh-TW'
 title = 'indieveloper'
 hasCJKLanguage = true
 relativeURLs = true
+copyright = '<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.'
 
 ignoreFiles = ['/node_modules/*']
+
+[author]
+    name = '林貓 Wancat'
+    email = 'hi@indie.tw'
 
 [params]
 mainSections = ['docs']
 subTitle = '獨立開發者'
 timeFormat = "2006.01.02 15:04"
-email = 'hi@indie.tw'
 logo = '/img/logo_transparent.png'
 icon = '/img/icon.png'
 
 [menu]
-    [[menu.main]]
-        name = 'docs'
-        url = '/docs/'
-        weight = 10
+#    [[menu.main]]
+#        name = 'docs'
+#        url = '/docs/'
+#        weight = 10
         
 #    [[menu.main]]
 #        name = 'blog'
@@ -41,4 +45,10 @@ icon = '/img/icon.png'
         name = 'odysee'
         url = 'https://odysee.com/@indieveloper'
         weight = 50
+        params.newTab = true
+
+    [[menu.main]]
+        name = 'rss'
+        url = '/index.xml'
+        weight = 100
         params.newTab = true

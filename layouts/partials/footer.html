@@ -1,3 +1,4 @@
 <footer>
-	<p>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> {{ with .Site.Params.email }}Contact: <a href="mailto:{{ . }}">{{ . }}</a>{{ end }}</p>
+	<p>{{ .Site.Copyright | safeHTML }}</p>
+	<p>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> {{ with .Site.Author.Email }}Contact: <a href="mailto:{{ . }}">{{ . }}</a>{{ end }}</p>
 </footer>
