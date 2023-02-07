@@ -9,7 +9,7 @@
         <div align="center">
         {{ .Content }}
         </div>
-		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+		{{ $paginator := .Paginate .Site.RegularPages }}
 		{{ range $paginator.Pages }}
 			{{ .Render "summary" }}
 		{{ end }}

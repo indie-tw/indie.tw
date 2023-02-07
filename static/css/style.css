@@ -151,7 +151,7 @@ input:checked ~ aside {
   border: 0;
 }
 
-p img {
+article img {
     display: block;
     width: 70%;
     margin-left: auto;
