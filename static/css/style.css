@@ -167,6 +167,6 @@ code {
 }
 
 pre code {
-    padding: 5px;
-    border-radius: 5px;
+    background-color: transparent;
+    padding-left: 10px;
 }

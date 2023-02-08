@@ -7,6 +7,7 @@
 {{ with .Site.Params.author }}
 <meta name="author" content="{{ . }}">{{ end }}
 <link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
+<link rel="stylesheet" href='{{ "css/highlight.css" | relURL }}'>
 <link rel="icon" href="{{ .Site.Params.icon }}">
 {{ with .OutputFormats.Get "RSS" -}}
 {{ printf `
