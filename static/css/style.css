@@ -157,3 +157,16 @@ article img {
     margin-left: auto;
     margin-right: auto;
 }
+
+code {
+    font-family: "Noto Sans Mono CJK TC", monospace;
+    background-color: rgb(53, 53, 53);
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+pre code {
+    padding: 5px;
+    border-radius: 5px;
+}
