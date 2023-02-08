@@ -19,6 +19,7 @@ subTitle = '獨立開發者'
 timeFormat = "2006.01.02 15:04"
 logo = '/img/logo_transparent.png'
 icon = '/img/icon.png'
+favicon = '/img/logo.png'
 
 [menu]
 #    [[menu.main]]

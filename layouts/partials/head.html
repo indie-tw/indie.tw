@@ -8,7 +8,7 @@
 <meta name="author" content="{{ . }}">{{ end }}
 <link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
 <link rel="stylesheet" href='{{ "css/highlight.css" | relURL }}'>
-<link rel="icon" href="{{ .Site.Params.icon }}">
+<link rel="icon" href="{{ .Site.Params.favicon }}">
 {{ with .OutputFormats.Get "RSS" -}}
 {{ printf `
 <link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
