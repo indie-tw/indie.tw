@@ -25,6 +25,8 @@ ISO 檔你可以想像是把一個硬碟封裝在一個檔案裡，裡面包含�
 
 因為 ISO 目前是存在我們電腦的硬體裡，沒辦法直接拿來開機，因此我們要將 ISO 放到 USB 中，我會使用的燒錄程式是 [Ventoy](https://ventoy.net)，Ventoy 可以讓你在一個 USB 存入多個 ISO 檔，完整利用你的儲存空間，方便你試用不同的發行版。到 [Ventoy 下載頁面](https://github.com/ventoy/Ventoy/releases)，選擇你**正在使用的作業系統**下載。
 
+Mac 使用者可以參考 Ubuntu 的[官方文件](https://ubuntu.com/tutorials/create-a-usb-stick-on-macos#1-overview)
+
 ![download ventoy](./download-ventoy.jpg)
 
 插入你的 USB，解壓縮後執行 Ventoy2Disk，選擇你的 USB 裝置（**注意不要選到你的硬碟！**），按 Install。
@@ -46,6 +48,13 @@ ISO 檔你可以想像是把一個硬碟封裝在一個檔案裡，裡面包含�
 ![boot menu](./boot-menu.jpg)
 
 ![ventoy menu](./ventoy-menu.jpg)
+
+{{< details "我叫不出開機選單怎麼辦？" >}}
+你需要上網查詢你的電腦型號使用的開機選單快捷鍵是什麼。另外從 Windows 10 開始，開機選單預設是被關閉的，你需要進到 Windows 的`設定/復原/進階重新啟動`來選擇你的 USB 開機。
+{{< /details >}}
+{{< details "開機選單中沒有我的 USB" >}}
+你可能需要進到 BIOS 設定中，將 Secure Boot 關閉，再重試一次。
+{{< /details >}}
 
 ## 安裝 OS
 
@@ -69,9 +78,23 @@ ISO 檔你可以想像是把一個硬碟封裝在一個檔案裡，裡面包含�
 
 代理伺服器留空，鏡像伺服器保持預設。
 
+{{< details "我手動設定後連線失敗了" >}}
+如果你在手動設定網路後連線失敗了，可能你的路由器強制要使用自動分配的 IP，或是你的某些參數設定錯誤，那你可以先調整回自動 `Automatic (DHCP)`，並記下自動分配的 IP，稍後到路由器設定 IP 綁定。但這個方法不太建議，我以前一開始也是這樣設，但後來換了一台路由器，所有機器的 IP 都跑掉，帶來一場災難。
+{{< /details >}}
+{{< details "我用手機網路" >}}
+如果你是用手機分享網路，從 Android 8 開始，都會使用隨機的網路位址跟閘道，因此你沒辦法設定靜態 IP，只能使用自動分配，這在未來也會給你帶來很多管理上的麻煩，因此不太建議。
+{{< /details >}}
+
 ### 硬碟分割
 
-接著進到硬碟分割，我預設你這邊只使用一顆硬碟，如果你有多顆硬碟，請參考這邊的教學。我們選擇 `Use an entire disk`，並取消勾選 `Set up this disk as an LVM group`，LVM 是一個邏輯分割硬碟的系統，但有些複雜，因此除非你知道你在做什麼，否則我們先取消它。
+接著進到硬碟分割，我預設你這邊只使用一顆硬碟。我們選擇 `Use an entire disk`，並取消勾選 `Set up this disk as an LVM group`，LVM 是一個邏輯分割硬碟的系統，但有些複雜，因此除非你知道你在做什麼，否則我們先取消它。
+
+{{< details "我有多顆硬碟" >}}
+Linux 跟 Windows 不一樣，並沒有所謂 C 槽或 D 槽，所有檔案都是位在根目錄 `/` 底下，而我們可以將硬碟掛載到根目錄下的任何一個目錄，因此你在存檔案時也不用特別將檔案存到不同的其他地方。在伺服器上。
+當你有多顆硬碟，你可以選擇將其掛載在不同的資料夾，在伺服器上 `/var` 是儲存應用程式的資料的地方，如你的 database、使用者上傳的檔案；此外 `/home` 是使用者的家目錄資料夾，也可以考慮。此外，如果你是有兩顆一樣的硬碟，也可以考慮組成磁碟陣列 RAID，但這比較進階。
+
+Ubuntu Server 上的硬碟分割可以參考 Ubuntu [官方文件](https://ubuntu.com/server/docs/install/storage)
+{{< /details >}}
 
 ![disk partition](./os-disk.jpg)
 
