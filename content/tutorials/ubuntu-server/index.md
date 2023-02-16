@@ -2,7 +2,9 @@
 title = '實戰 Ubuntu Server 安裝'
 date = '2023-02-03T09:43:34+08:00'
 draft = false
+odysee = "實戰-ubuntu-server-實體機安裝:a"
 +++
+
 
 ## 事前準備
 

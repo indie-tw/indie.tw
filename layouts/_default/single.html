@@ -5,6 +5,9 @@
 			<time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format .Site.Params.TimeFormat }}</time>
 			<div>
 				{{ .TableOfContents }}
+				{{ with .Params.odysee }}
+					{{ partial "odysee" . }}
+				{{ end }}
 				{{ .Content }}
 			</div>
 			{{ with .Params.tags }}

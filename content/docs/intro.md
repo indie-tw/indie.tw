@@ -2,9 +2,8 @@
 title = '為什麼你應該架自己的伺服器'
 date = '2022-12-13T08:40:00+08:00'
 draft = false
+odysee = "why-self-host:5"
 +++
-
-{{< odysee "why-self-host:5" >}}
 
 ## 我的檔案在哪裡
 
