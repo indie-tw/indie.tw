@@ -26,7 +26,7 @@ favicon = '/img/logo.png'
 #        name = 'docs'
 #        url = '/docs/'
 #        weight = 10
-        
+
 #    [[menu.main]]
 #        name = 'blog'
 #        url = '/blog/'
@@ -43,7 +43,7 @@ favicon = '/img/logo.png'
         url = 'https://www.youtube.com/@indieveloper'
         weight = 40
         params.newTab = true
-    
+
     [[menu.main]]
         name = 'odysee'
         url = 'https://odysee.com/@indieveloper'
@@ -57,15 +57,15 @@ favicon = '/img/logo.png'
         params.newTab = true
 
 
-[markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    hl_Lines = ''
-    hl_inline = true
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = false
-    style = 'monokai'
-    tabWidth = 4
+# [markup]
+#   [markup.highlight]
+#     codeFences = true
+#     guessSyntax = false
+#     hl_Lines = ''
+#     hl_inline = true
+#     lineNoStart = 1
+#     lineNos = false
+#     lineNumbersInTable = true
+#     noClasses = false
+#     style = 'monokai'
+#     tabWidth = 4
